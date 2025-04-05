@@ -1,19 +1,4 @@
-const express = require('express') //import express module, used for web development
-const path = require('path') //import path module, pre built node js module, for working with directory and path
-const app = express() //creating an instance of express called app
-const PORT = process.env.PORT || 3000 // port
-const axios = require('axios') // for api handling
-require('dotenv').config(); // to access .env variable
-
-
-
-app.use(express.static(path.join(__dirname, 'public')));    
-
-app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname,'public','index.html'))
-})
-
-const axios = require('axios')
+import axios from 'axios';
 
 export default async function handler(req, res) {
   try {
@@ -25,9 +10,3 @@ export default async function handler(req, res) {
     res.status(500).send("Error fetching Hadith data");
   }
 }
-
-
-
-app.listen(PORT, ()=>{
-    console.log(`Server is running at http://localhost:${PORT}`);
-})
