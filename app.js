@@ -15,6 +15,7 @@ app.get('/', (req,res) => {
 
 app.get('/api/hadith', async (req, res) => {
     try {
+
       const apiUrl = `https://hadithapi.com/api/hadiths?apiKey=${process.env.API_KEY}&paginate=50`;
   
       const response = await axios.get(apiUrl);  // Make the API request
