@@ -4,6 +4,9 @@ export default async function handler(req, res) {
   try {
     const apiUrl = `https://hadithapi.com/api/hadiths?apiKey=${process.env.API_KEY}&paginate=50`;
     const response = await axios.get(apiUrl);
+
+    console.log("api response", response.data)
+
     res.status(200).json(response.data);
   } catch (error) {
     console.error("Error fetching hadith:", error.message);
