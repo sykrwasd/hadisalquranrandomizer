@@ -15,6 +15,16 @@ body h2{
     justify-content: center;
 }
 
+.navbar{
+    background-color: white;
+    outline: solid black 1px;
+}
+
+.navbar-toggler-icon{
+    background-color: skyblue;
+    border-radius: 5px;
+}
+
 .form{
     display: flex;
     align-items: center;
@@ -65,3 +75,24 @@ footer{
     margin-top: 10px;
     text-align: center;
 }
+
+@media only screen and (max-width: 391px) {
+  
+    .container{
+        width: 80vw;
+        height: 70vh;
+        background-color: rgb(255, 255, 255);
+        margin-top: 10px;
+        outline: black solid 1px;
+        border-radius: 20px;
+        text-align: center;
+        flex-direction: column;
+       
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+  }
+  
