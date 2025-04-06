@@ -23,7 +23,7 @@ app.get('/api/hadith', async (req, res) => {
   try {
     
 
-    const apiUrl = `https://hadithapi.com/api/hadiths?apiKey=${process.env.API_KEY}&paginate=50`;
+    const apiUrl = `https://hadithapi.com/api/hadiths?apiKey=${process.env.API_KEY}&paginate=100`;
     const response = await axios.get(apiUrl);
     res.json(response.data);
   } catch (error) {

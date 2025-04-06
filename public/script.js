@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(response => response.json())
                 .then(data => {
                     //to make sure the hadith is not too big for the container, only <200 characther hadis is allowed
-                    if (data.hadiths && data.hadiths.data && data.hadiths.data.length > 0) {
-                        const validHadiths = data.hadiths.data.filter(hadith => hadith.hadithEnglish.length < 200);
+                    if (data.hadiths && data.hadiths.data && data.hadiths.data.length  > 0) {
+                        const validHadiths = data.hadiths.data.filter(hadith => hadith.hadithEnglish.length < 100);
                         
                         if (validHadiths.length > 0) {
                             const randomHadith = validHadiths[Math.floor(Math.random() * validHadiths.length)];
